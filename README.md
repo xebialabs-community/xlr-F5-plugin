@@ -1,4 +1,7 @@
 # xlr-F5-plugin
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/eca7756dec96451f82a87fd09670096a)](https://www.codacy.com/app/gsajwan/xlr-F5-plugin?utm_source=github.com&utm_medium=referral&utm_content=xebialabs-community/xlr-F5-plugin&utm_campaign=badger)
+
 Plugin for GTM/LTM
 [![Build Status](https://travis-ci.org/xebialabs-community/xlr-F5-plugin.svg?branch=master)](https://travis-ci.org/xebialabs-community/xlr-F5-plugin)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/eca7756dec96451f82a87fd09670096a)](https://www.codacy.com/app/gsajwan/xlr-F5-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=xebialabs-community/xlr-F5-plugin&amp;utm_campaign=Badge_Grade)
