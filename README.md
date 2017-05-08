@@ -19,13 +19,14 @@ Install Python 2.7.x and the additional [pycontrol](https://pypi.python.org/pypi
 This plugin is mean to run the python script on the xl release windows server.
 
 ### Configuring Template
+
+#### Enable LTM
 ![enableLTM](images/enableLTM.png)
-
-
+#### Disable LTM
 ![disableLTM](images/disableLTM.png)
-
+#### Enable GTM
 ![enableGTM](images/enableGTM.png)
-
+#### Disable GTM
 ![disableGTM](images/disableGTM.png)
 
 ---
