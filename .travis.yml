@@ -9,10 +9,7 @@ notifications:
 deploy:
   provider: releases
   api_key:
-    secure: MDy/R3WGvW3rGg9YEEBzGkZtKMK8EEwR/+xoX2ynXrEKGGiXEmCLeJ1i+X5v1N+Wn7y86t9zkwBtMRgWDbHOQMPRv+XcBpJXIKbS+KSkzKbDVEBk9m8Qh8XxhSDUWhjIBiVfUe4/jrEVHE9vIXGFoikLMf9IQyLgeOEkLDLs6ag=
+    secure: BYyLJQh3iLp5hWYMmEUFOCYHbzePP4plGLvGXZXUI9L3vslKXt98iKjnOJTNG+/u9U4uQQsvqyULl4qlFosCzR/VVxW5jjtVyTlao743/pPqMwF+mxi9RqkWScivd6OIx6NNY4bkvLzN/6TUzEkuF0dwxn32JzRhcxQ9I4FNgqKnFvH/B+QWmyk6nNW/uooT07iDZXXYrkxjVQLxUSjqB7ZxkQgjAUWTt42uauj4VvCc5b7yz2K9wSXTFf0mUNv/Az2zLQHzOwRI4DEoDTcjE9AE27iURsRJXLTG/no4ILr8QPGTI9M5eaKJnEWx5srDTnRXyFXYPryIvsgpMleErwyHF2ETlWNZ8IeOfEcdAFWx/jBNCyeyrx6Sq0CRvexmQgY+uh0N5O+tKSqeQx/ROOZCapBKUOQJBjeQgNqfAo/EPZxFl5j+ri8sZbPqXUxjiBWTnTAOHhLF/04u4rO8uPg0I/4VFszLSiq7jqK9fIWw38IEj8P/yoEd1yuX0Ndd+WK7j5aAZGYCu5zYpxDdz//WfcLBX8Qg+2OLTkXZtAPFY9PleuFJ/vaxCAHHHYa3OvW3WUBP8RtV6GAA+OCXeGRn8vKTXEJrzuVvZHvQX3nsFD0eMDqmrA8BCE0FdokMZm/4eukAsNkhq8ZB96tF/x7/MxgXXc33/QZnW5POuFM=
   file: build/libs/xlr-F5-plugin-1.0.0.jar
-  skip_cleanup: true
   on:
-    all_bracnhes: true
-    tags: true
     repo: xebialabs-community/xlr-F5-plugin
