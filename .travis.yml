@@ -1,0 +1,15 @@
+language: java
+sudo: false
+notifications:
+  slack:
+    secure: WzdS5sSSQziwbZwqW8nCddRGC8SSrgcPyVn9NbV2MOkqa4mFawQOL05CCOc0RfV7otCCqxsDqXAehuyKzEVA8VrQ1g10Eelppbnv9WxDYzIj1M2MPmyo4RzHK6+aw0KRIujufgYQdxit+N/J2xATnUy+3hiXBQprCnIGXYaNk2w=
+  hipchat:
+    rooms:
+      secure: A0rtcc5iWVOiKodiYxX8DzNn777k2boUWILXtfEKKXqHzxENYaj5EHeMT+kC+2F/rnnjS79fMFD9VU4d/dbjiQH4wzHMPA5gBGpOpb+q0zbLTxt4sYmn+9HqVoIu774ZSBkX1fh5y/MM6qrjUJbPLMuBylM88PhYu95hGL7TW1w=
+deploy:
+  provider: releases
+  api_key:
+    secure: qBWTzHUA6/HUrWNqdz3Gz7qioRbHfEzyv1qPQKQylUpDVnpbsatuqXXL74BA0JxlG8Q/1X7+G030FEYabCT+E62ANXi/ZrbntAoiSpOrw9Ljbbo3ZMfO48qDNIF+NtUdm8JCX5RKC/n/Iju5nNbl5zHk42RCqIJvJPA0B6+w1YiLHa1E6MvA0vWQb/72mlvlIwWxlBQaUXUNCV4vxGfVHR2ShNpOLvrhC3g1LuR+2pzqyM/5i4MJAkrDVZMqWLy56TVnYU7LALgksBphS8lfnMsU+UMjk4nCU3EoDMnnDuQtJFVOq4uiaQIXlxdz2coR+VUNFjUX2Cq8AArefzf6fn15XubMF9v84q+mbDohobk3TujKavPDmHeNvjptyU5PUs6Kbv/uRqSQJU1sE1HlvQMk3It2Mo6o9BBtibl1gGQprnJHEuCnstSVhDw7R3pXyTg0u2FWk9dsrOj6HpjUcZu1GhPRQDI7TLZWpPR0CrE9DVyH3SquVBjCItjmrxsjAAzN2jsm0JRcyWk7oAgRxYvFa0SZhXPtNp8NtLIee+lg0oi7rFSqwwCB9S+fLxvRS3JiGRTsxX6cW08vyH1k0/kH7XhDI9qobSuzkbCE6+SR8JrN8NaXeLElkwItdP1VTDxEmrvDUnSlLfU2hwFkR1t2wCFA+M8cTt2bAtIEQms=
+  file: build/libs/xlr-F5-plugin-1.0.0.jar
+  on:
+    repo: xebialabs-community/xlr-F5-plugin
