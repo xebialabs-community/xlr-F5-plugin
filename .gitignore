@@ -1,9 +1,4 @@
 .gradle
-<<<<<<< HEAD
 .idea
 .DS_Store
-
-=======
-.idea*
 build
->>>>>>> 083f83f0de62658558fb1a051099cd0339e7fa54
