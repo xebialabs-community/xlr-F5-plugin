@@ -1,10 +1,15 @@
 # xlr-F5-plugin
 Plugin for GTM/LTM
+
+## Preface
+This document describes the functionality provide by the `xlr-F5-plugin`.
+
+## CI Status
+
 [![Build Status](https://travis-ci.org/xebialabs-community/xlr-F5-plugin.svg?branch=master)](https://travis-ci.org/xebialabs-community/xlr-F5-plugin)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/eca7756dec96451f82a87fd09670096a)](https://www.codacy.com/app/gsajwan/xlr-F5-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=xebialabs-community/xlr-F5-plugin&amp;utm_campaign=Badge_Grade)
 [![Code Climate](https://codeclimate.com/github/xebialabs-community/xlr-F5-plugin/badges/gpa.svg)](https://codeclimate.com/github/xebialabs-community/xlr-F5-plugin)
-## Preface
-This document describes the functionality provide by the `xlr-F5-plugin`.
+
 
 ## Overview
 #### GTM:
