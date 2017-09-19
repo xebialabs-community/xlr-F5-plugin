@@ -1,14 +1,19 @@
-# xlr-F5-plugin
+# xlr-f5-plugin
 Plugin for GTM/LTM
 
 ## Preface
-This document describes the functionality provide by the `xlr-F5-plugin`.
+This document describes the functionality provide by the `xlr-f5-plugin`.
 
 ## CI Status
 
-[![Build Status](https://travis-ci.org/xebialabs-community/xlr-F5-plugin.svg?branch=master)](https://travis-ci.org/xebialabs-community/xlr-F5-plugin)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/eca7756dec96451f82a87fd09670096a)](https://www.codacy.com/app/gsajwan/xlr-F5-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=xebialabs-community/xlr-F5-plugin&amp;utm_campaign=Badge_Grade)
-[![Code Climate](https://codeclimate.com/github/xebialabs-community/xlr-F5-plugin/badges/gpa.svg)](https://codeclimate.com/github/xebialabs-community/xlr-F5-plugin)
+[![Build Status](https://travis-ci.org/xebialabs-community/xlr-f5-plugin.svg?branch=master)](https://travis-ci.org/xebialabs-community/xlr-f5-plugin)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/eca7756dec96451f82a87fd09670096a)](https://www.codacy.com/app/gsajwan/xlr-f5-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=xebialabs-community/xlr-f5-plugin&amp;utm_campaign=Badge_Grade)
+[![Code Climate](https://codeclimate.com/github/xebialabs-community/xlr-f5-plugin/badges/gpa.svg)](https://codeclimate.com/github/xebialabs-community/xlr-f5-plugin)
+[![License: MIT][xlr-f5-plugin-license-image] ][xlr-f5-plugin-license-url]
+
+[xlr-f5-plugin-license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
+[xlr-f5-plugin-license-url]: https://opensource.org/licenses/MIT
+
 
 
 ## Overview
