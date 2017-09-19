@@ -12,7 +12,7 @@
        *            F5
        ********************************************************
     -->
-    <type type="BigIP.disableInF5" extends="xlrelease.PythonScript">
+    <type type="BigIP.disableInF5" label="Big IP: Disable in F5" extends="xlrelease.PythonScript">
         <property name="iconLocation" default="BigIP/F5NetworksLogo.png" hidden="true"/>
 
         <!-- ######## F5 Parameters ####### -->
@@ -29,7 +29,7 @@
         <property name="exitCode" required="false" category="output" description="Exit code of the process."/>
     </type>
 
-    <type type="BigIP.enableInF5" extends="xlrelease.PythonScript">
+    <type type="BigIP.enableInF5" label="Big IP: Enable in F5" extends="xlrelease.PythonScript">
         <property name="iconLocation" default="BigIP/F5NetworksLogo.png" hidden="true"/>
 
         <!-- ######## F5 Parameters ####### -->
@@ -45,7 +45,7 @@
         <property name="err" required="false" category="output" description="Error stream of the process."/>
         <property name="exitCode" required="false" category="output" description="Exit code of the process."/>
     </type>
-    <type type="BigIP.disableGTMInF5" extends="xlrelease.PythonScript">
+    <type type="BigIP.disableGTMInF5" label="Big IP: Disable GTM in F5" extends="xlrelease.PythonScript">
         <property name="iconLocation" default="BigIP/F5NetworksLogo.png" hidden="true"/>
 
         <!-- ######## F5 Parameters ####### -->
@@ -61,7 +61,7 @@
         <property name="exitCode" required="false" category="output" description="Exit code of the process."/>
     </type>
 
-    <type type="BigIP.enableGTMInF5" extends="xlrelease.PythonScript">
+    <type type="BigIP.enableGTMInF5" label="Big IP: Enable GTM in F5" extends="xlrelease.PythonScript">
         <property name="iconLocation" default="BigIP/F5NetworksLogo.png" hidden="true"/>
 
         <!-- ######## F5 Parameters ####### -->
