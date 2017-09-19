@@ -5,106 +5,21 @@
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-
-import sys
-import java.lang.System as System
-import java.text.SimpleDateFormat as Sdf
-import java.sql.Date as Date
-
-
-from java.lang import Exception
-from java.io import PrintWriter
-from java.io import StringWriter
-from java.lang import ClassLoader
-
-
-
-import os, re, sys, traceback
-
-import java.lang.String as String
-
-from com.xebialabs.overthere import CmdLine
-from com.xebialabs.overthere.util import CapturingOverthereExecutionOutputHandler, OverthereUtils
-from com.xebialabs.overthere.local import LocalConnection
-
-class WinLocalCmd():
-    def __init__(self, script):
-        self.script = script
-
-
-        self.stdout = CapturingOverthereExecutionOutputHandler.capturingHandler()
-        self.stderr = CapturingOverthereExecutionOutputHandler.capturingHandler()
-
-    def execute(self):
-
-        connection = None
-        try:
-            connection = LocalConnection.getLocalConnection()
-            tmp_workspace_file = connection.getTempFile('tmp_workspace')
-            workspace_path = re.sub('tmp_workspace', '', tmp_workspace_file.getPath())
-            workspace_directory = connection.getFile(workspace_path)
-            connection.setWorkingDirectory(workspace_directory)
-            new_path = "%s\ltm" % workspace_path
-            if not os.path.exists(new_path):
-                os.makedirs(new_path)
-            # connection.setWorkingDirectory(connection.getFile(self.scriptpath))
-            # upload the script and pass it to cscript.exe
-
-            ltm_enable_file = connection.getFile(OverthereUtils.constructPath(connection.getFile(new_path), 'ltm_enable.py'))
-            OverthereUtils.write(String(self.script).getBytes(), ltm_enable_file)
-            ltm_enable_file.setExecutable(True)
-            ltm_enable_file_path = ltm_enable_file.getPath()
-
-            targetFile = connection.getTempFile('ltm_enable_script', '.cmd')
-            batch_script =  "@echo off\r\ncd %s\r\npython %s \r\n" % (workspace_path, ltm_enable_file_path)
-            OverthereUtils.write(String(batch_script).getBytes(), targetFile)
-            targetFile.setExecutable(True)
-            # run cscript in batch mode
-            scriptCommand = CmdLine.build(targetFile.getPath())
-            return connection.execute(self.stdout, self.stderr, scriptCommand)
-        except Exception, e:
-            stacktrace = StringWriter()
-            writer = PrintWriter(stacktrace, True)
-            e.printStackTrace(writer)
-            self.stderr.handleLine(stacktrace.toString())
-            return 1
-        finally:
-            if connection is not None:
-                connection.close()
-
-    def getStdout(self):
-        return self.stdout.getOutput()
-
-    def getStdoutLines(self):
-        return self.stdout.getOutputLines()
-
-    def getStderr(self):
-        return self.stderr.getOutput()
-
-    def getStderrLines(self):
-        return self.stderr.getOutputLines()
-
-scriptFile = """
-#!/usr/bin/python
-
-import pycontrol.pycontrol as pc
-import getpass
-import sys
-from sys import argv
+import bigsuds as pc
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
-bigip_address = '%s'
-bigip_user = '%s'
-bigip_pass = '%s'
-active_partition = '%s'
-poolmember_pool = '%s'
+bigip_address = '%s' % bigIpAddress
+bigip_user = '%s' % bigIpUser
+bigip_pass = '%s' % bigIpPass
+active_partition = '%s' % activePartition
+poolmember_pool = '%s' % poolMemberPool
 # 192.168.1.2:7070, 192.168.1.45:6600, 192.168.1.45
 # 192.168.1.2:7070
 # 192.168.1.2
 # Address should be given in above manner
 # if port number is not given the default 80 port will be set.
-poolmember_address = '%s'
+poolmember_address = '%s' % poolMemberAddress
 
 
 poolmember_address_array = []
@@ -124,7 +39,7 @@ for poolmember_address_ip_port in poolmember_address_list:
         poolmember_port_array.append(80)
 
 print 'Connecting to BIG-IP at [' + bigip_address + '] as user [' + bigip_user + ']'
-bigip = pc.BIGIP(hostname = bigip_address, username = bigip_user, password = bigip_pass, fromurl = True, wsdls = ['Management.Partition', 'LocalLB.Pool', 'LocalLB.PoolMember'])
+bigip = pc.BIGIP(hostname = bigip_address, username = bigip_user, password = bigip_pass)
 
 pool = bigip.LocalLB.Pool
 pool_version = pool.get_version()
@@ -201,30 +116,3 @@ else:
     pool.set_member_session_enabled_state(pool_names = [poolmember_pool], members= [pmem_seq], session_states = [state_seq])
 
 print 'Done'
-""" % ( bigIpAddress, bigIpUser, bigIpPass, activePartition, poolMemberPool, poolMemberAddress )
-
-
-
-script = WinLocalCmd(scriptFile)
-exitCode = script.execute()
-
-output = script.getStdout()
-err = script.getStderr()
-if (exitCode == 0):
-    print scriptFile
-    print "----"
-    print output
-else:
-    print "Exit code "
-    print exitCode
-    print
-    print "#### Output:"
-    print output
-
-    print "#### Error stream:"
-    print err
-    print
-    print "----"
-
-    #sys.exit(exitCode)
-    sys.exit(0)
