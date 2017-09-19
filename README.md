@@ -6,13 +6,21 @@ This document describes the functionality provide by the `xlr-f5-plugin`.
 
 ## CI Status
 
-[![Build Status](https://travis-ci.org/xebialabs-community/xlr-f5-plugin.svg?branch=master)](https://travis-ci.org/xebialabs-community/xlr-f5-plugin)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/eca7756dec96451f82a87fd09670096a)](https://www.codacy.com/app/gsajwan/xlr-f5-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=xebialabs-community/xlr-f5-plugin&amp;utm_campaign=Badge_Grade)
-[![Code Climate](https://codeclimate.com/github/xebialabs-community/xlr-f5-plugin/badges/gpa.svg)](https://codeclimate.com/github/xebialabs-community/xlr-f5-plugin)
+[![Build Status][xlr-f5-plugin-travis-image] ][xlr-f5-plugin-travis-url]
+[![Codacy][xlr-f5-plugin-codacy-image] ][xlr-f5-plugin-codacy-url]
+[![Code Climate][xlr-f5-plugin-code-climate-image] ][xlr-f5-plugin-code-climate-url]
 [![License: MIT][xlr-f5-plugin-license-image] ][xlr-f5-plugin-license-url]
+[![Github All Releases][xlr-f5-plugin-downloads-image] ]()
 
+[xlr-f5-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xlr-f5-plugin.svg?branch=master
+[xlr-f5-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xlr-f5-plugin
+[xlr-f5-plugin-codacy-image]: https://api.codacy.com/project/badge/Grade/eca7756dec96451f82a87fd09670096a
+[xlr-f5-plugin-codacy-url]: https://www.codacy.com/app/gsajwan/xlr-f5-plugin
+[xlr-f5-plugin-code-climate-image]: https://codeclimate.com/github/xebialabs-community/xlr-f5-plugin/badges/gpa.svg
+[xlr-f5-plugin-code-climate-url]: https://codeclimate.com/github/xebialabs-community/xlr-f5-plugin
 [xlr-f5-plugin-license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
 [xlr-f5-plugin-license-url]: https://opensource.org/licenses/MIT
+[xlr-f5-plugin-downloads-image]: https://img.shields.io/github/downloads/xebialabs-community/xlr-f5-plugin/total.svg
 
 
 
